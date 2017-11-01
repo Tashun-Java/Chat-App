@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
+<title>Welcome</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
@@ -13,7 +13,7 @@
     <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
 
       <div class="w3-center"><br>
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+        <!-- <span onclick=close_window() class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span> -->
         <!--<img src="img_avatar4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">-->
       </div>
 
@@ -43,7 +43,7 @@
     <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
 
       <div class="w3-center"><br>
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+        <!-- <span onclick=close_window() class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span> -->
         <!-- <img src="img_avatar4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top"> -->
       </div>
 
@@ -51,10 +51,12 @@
         <div class="w3-section">
           <label><b>Username</b></label>
           <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
+          <label><b>Index No</b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="number" placeholder="Enter Username" name="index_no" required>
           <label><b>Enter Password</b></label>
           <input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Enter Password" name="psw" required>
           <label><b>Confirm Password</b></label>
-          <input class="w3-input w3-border" type="password" placeholder="Confirm Password" name="psw" required>
+          <input class="w3-input w3-border" type="password" placeholder="Confirm Password" name="conf_psw" required>
           <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Sign Up</button>
         </div>
       </form>
@@ -83,6 +85,12 @@
    function showLogIn(){
       document.getElementById('id02').style.display='none';
       document.getElementById('id01').style.display='block';
+   }
+
+   function close_window(){
+      if (confirm("Close Window?")){
+         window.close();
+      }
    }
 
 </script>
